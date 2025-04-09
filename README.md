@@ -57,7 +57,7 @@ Proyecto Sistema de Gestion de Restaurantes que permita gestionar las operacione
 - **Laravel**: Framework PHP para el desarrollo del backend.
 - **Laravel Breeze/Jetstream**: Para la autenticación.
 - **OAuth**: Para la autenticación con redes sociales.
-- **Base de Datos MySQL**: Para el almacenamiento de datos.
+- **Base de Datos Postgres**: Para el almacenamiento de datos.
 
 ---
 
