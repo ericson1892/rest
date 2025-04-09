@@ -1,66 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Curso
+TALLER DE PROGRAMACION
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Integrantes
+Ericson Junior Vargas Perez.
 
-## About Laravel
+# ProyectoRestaurante
+Proyecto Sistema de Gestion de Restaurantes que permita gestionar las operaciones del restaurante
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+###	Gestión de menú: Creación y actualización de platos y menús.
+###	Gestión de órdenes: Registro de órdenes, tanto en el local como para delivery.
+###	Reservas: Gestión de reservas de mesas.
+###	Gestión de personal: Administración del personal y asignación de turnos.
+###	Facturación: Generación de facturas y control de pagos.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Estructura del Proyecto
 
-## Learning Laravel
+### 1. Autenticación con Roles
+**Clientes y Empleados**  
+- **Laravel**: Se utilizará para la autenticación básica.  
+- **OAuth**: Implementación de autenticación a través de Facebook y Google para clientes.  
+- **Registro Manual de Empleados**: Los empleados serán registrados manualmente con roles específicos (admin, cocinero, mesero, cajero).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 2. Gestor de Cuentas con Roles
+- **CRUD de Usuarios**: Creación, lectura, actualización y eliminación de usuarios con asignación de roles.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 3. Gestión de Mesas
+- **CRUD de Mesas**: Los empleados pueden ver la disponibilidad y cambiar los estados de las mesas.
+- **Estados de las Mesas**: *Disponible, Ocupada, Reservada, En Limpieza*.
+- **Cambio de Estado Dinámico**: Por ejemplo, tras el pago, la mesa pasa a *Limpieza* y luego a *Disponible*.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 4. Gestión de Reservas
+- **Reservas de Clientes**: Los clientes pueden reservar mesas con fecha y hora específicas.
+- **Visualización en Tiempo Real**: Los meseros pueden ver las mesas reservadas en tiempo real.
 
-## Laravel Sponsors
+### 5. Gestión de Pedidos en Tiempo Real
+- **Pedidos de Clientes**: Los clientes pueden hacer pedidos desde su mesa.
+- **Visualización de Pedidos**: Los empleados (cocineros y meseros) pueden ver los pedidos en tiempo real.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 6. Formulario de Pago e Impresión de Ticket
+- **Registro de Pagos**: Los empleados pueden registrar pagos.
+- **Generación de Tickets**: Se pueden generar tickets para imprimir.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Módulos Principales
+1. **Autenticación y Roles**: Gestión de usuarios y autenticación segura.  
+2. **Gestión de Mesas**: Administración dinámica del estado de las mesas.  
+3. **Gestión de Reservas**: Reservas en tiempo real y visualización para empleados.  
+4. **Gestión de Pedidos**: Pedidos en tiempo real y seguimiento por parte del personal.  
+5. **Pagos y Tickets**: Registro de pagos y generación de tickets.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Tecnologías Utilizadas
+- **Laravel**: Framework PHP para el desarrollo del backend.
+- **Laravel Breeze/Jetstream**: Para la autenticación.
+- **OAuth**: Para la autenticación con redes sociales.
+- **Base de Datos MySQL**: Para el almacenamiento de datos.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Beneficios Esperados
+- **Eficiencia**: Mejora en la gestión de mesas y pedidos.  
+- **Experiencia del Usuario**: Facilidad de uso para clientes y empleados.  
+- **Seguridad**: Autenticación segura y gestión de roles.
+- **Opcional**: agregacion de docker .
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Conclusión
+Este proyecto tiene como objetivo principal proporcionar una solución integral para la gestión de un restaurante, mejorando la eficiencia y la experiencia del usuario. Con una estructura modular y un enfoque en la usabilidad y seguridad, el sistema está diseñado para satisfacer las necesidades tanto de los clientes como del personal del restaurante
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
